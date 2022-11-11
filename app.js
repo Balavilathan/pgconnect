@@ -18,11 +18,15 @@ var connectionString = process.env.DATABASE_URL || 'postgres://ojsosbuiqyntyr:c0
 var bodyParser = require("body-parser");
 
 if (process.env.DATABASE_URL !== undefined) {
- // pg.defaults.ssl = true;
-  pg.defaults.ssl = false;
+  pg.defaults.ssl = true;
+ // pg.defaults.ssl = false;
 }
 
-var client = new pg.Client(connectionString);
+var client = new pg.Client({connectionString ,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 client.connect();
 
 var schema = 'public.';
