@@ -12,7 +12,7 @@ var connectionString =
   port: 5432,
 };
 */
-var connectionString = 'postgres://ojsosbuiqyntyr:c0e4c6cbf2767995b633bb9669c1ffa0de898e70e032e284378370c99a949a03@ec2-44-195-132-31.compute-1.amazonaws.com:5432/depo2gk84nnenc';
+var connectionString = process.env.DATABASE_URL || 'postgres://ojsosbuiqyntyr:c0e4c6cbf2767995b633bb9669c1ffa0de898e70e032e284378370c99a949a03@ec2-44-195-132-31.compute-1.amazonaws.com:5432/depo2gk84nnenc';
 //var connectionString ='postgres://postgres:psadmin1@localhost:5432/balaDemo';
 
 var bodyParser = require("body-parser");
