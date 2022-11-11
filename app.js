@@ -16,12 +16,12 @@ var connectionString = process.env.DATABASE_URL || 'postgres://ojsosbuiqyntyr:c0
 //var connectionString ='postgres://postgres:psadmin1@localhost:5432/balaDemo';
 
 var bodyParser = require("body-parser");
-
+/*
 if (process.env.DATABASE_URL !== undefined) {
   pg.defaults.ssl = true;
  // pg.defaults.ssl = false;
 }
-
+*/
 var client = new pg.Client({connectionString ,
   ssl: {
     rejectUnauthorized: false
